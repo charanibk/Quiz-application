@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Completed</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .score {
+      font-size: 32px;
+      color: green;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px;
+      background: #007BFF;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Quiz Completed!</h1>
+    <p>Thank you for participating.</p>
+    <p>Your Score:</p>
+    <div class="score" id="scoreDisplay">0 / 0</div>
+
+    <a href="quiz.html" class="btn">🔁 Try Again</a>
+    <a href="user/user-dashboard.php" class="btn">🏠 Go to Dashboard</a>
+  </div>
+   
+   <script>
+  const score = sessionStorage.getItem("lastScore") || 0;
+  const total = sessionStorage.getItem("totalQuestions") || 0;
+  document.getElementById("scoreDisplay").innerText = `${score} / ${total}`;
+  sessionStorage.removeItem("lastScore");
+  sessionStorage.removeItem("totalQuestions");
+
+
+</script> 
+</body>
+</html>

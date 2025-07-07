@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Take Quiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d3cce3, #e9e4f0);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .quiz-box {
+      text-align: left;
+    }
+
+    #question-title {
+      font-size: 20px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    #options label {
+      display: block;
+      background: #f2f2f2;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #options label:hover {
+      background-color: #e0e0e0;
+    }
+
+    #options input {
+      margin-right: 12px;
+    }
+
+    #time {
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container quiz-box">
+    <h2>📝 Take the Quiz</h2>
+    <div id="question-title">Question will appear here...</div>
+    <div id="options"></div>
+    <p>⏳ Time left: <span id="time">30</span> seconds</p>
+    <button onclick="goToNextQuestion()">Next</button>
+  </div>
+
+  <!-- Quiz logic -->
+  <script src="js/quiz.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
